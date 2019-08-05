@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">Item's List</div>
+        <div class="card-body">
+            <input [(ngModel)]="newItem" placeholder="Add Item" class="add-item">
+            <button (click)="pushItem()">Add</button>
+        </div>
+        <ul class="list-item">
+            <li *ngFor="let i of items; let ind=index">
+                {{i}}
+                <span (click)="removeItem(ind)">x</span>
+            </li>
+        </ul> 
+      </div>
+</div>
+
